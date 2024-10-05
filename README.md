@@ -10,7 +10,7 @@ This is a description of our dataset paper: A real world visual slam dataset for
 
 ## Download 
 
-It will be released after the paper is accepted.
+The dataset will be  available after the paper is accepted.
 
 | Sequence            | Duration | Size  | Description                           | Link   |
 | ------------------- | -------- | ----- | ------------------------------------- | ------ |
@@ -21,13 +21,14 @@ It will be released after the paper is accepted.
 | Floor4, static3     | 24s      | 3.08G | Texture-less, single room             | Rosbag |
 | Floor1, dynamic     | 55s      | 5.43G | Motion blur, dynamic workers          | Rosbag |
 
-- Floor1 is a segment from the raw sequence and does not contain tf messages. You can use the transformations from other sequences.
+
+- The Floor1 sequence is a segment of the raw data and does not contain tf messages. Transformations from other sequences can be used.
 
 
 
 ## Hardware
 
-Include a RealSense L515 camera and a Ouster OS0-128 lidar. See our paper for more information about these sensors.
+The dataset was collected using a RealSense L515 camera and an Ouster OS0-128 LiDAR. Further details about the sensors can be found in our paper.
 
 <p align="center">
   <img src="figure/camera.png" alt="camera" height="250"> <img src="figure/lidar.png" alt="lidar" height="250">
@@ -43,7 +44,7 @@ Include a RealSense L515 camera and a Ouster OS0-128 lidar. See our paper for mo
 ## Prerequisites
 ### Ubuntu and ROS
 
-The dataset is recorded in rosbag. So we recommend you using Ubuntu and ROS. We test the system on ROS Noetic and Ubuntu 20.04. Other versions should be possible.
+The dataset is recorded in rosbag format. We recommend using Ubuntu and ROS for optimal compatibility. The system has been tested on ROS Noetic and Ubuntu 20.04, but other versions should also work.
 
 To use the provided lidar slam ground truth and visual slam benchmark, you need to install docker on your computer. If you are going to run them on your host machine, you might need to do some modification ( follow the original  repositories or instructions in our dockerfile).
 
@@ -198,7 +199,7 @@ roslaunch limovelo ouster.launch
 
 ## Benchmark
 
-In our paper we use vins-rgbd as a baseline. But here we provide both orbslam3 and vins rgbd for you. They all run in RGBD-Inertial mode.
+In our paper, we used VINS-RGBD as a baseline. However, we also provide both ORBSLAM3 and VINS-RGBD for benchmarking. They run in RGBD-Inertial mode.
 
 Open the corresponding container and run:
 
@@ -248,19 +249,15 @@ roslaunch orbslam3 vio.launch
 
 ## Evaluation
 
-The localization results are saved in tum format. See [evo](https://github.com/MichaelGrupp/evo.git) for some help.
-We do not calibrate the extrinsic between lidar and camera, so use --align for automated alignment in evo, or set a same start point manually. 
-
+The localization results are saved in TUM format. You can use the [evo tool](https://github.com/MichaelGrupp/evo.git) for trajectory evaluation. Note that the extrinsic calibration between the LiDAR and the camera is not provided. For alignment in evo, use the --align option for automated alignment, or manually set a common starting point.
 
 
 ## Acknowledgments
 
-We would like to thank the mentioned repositories. Please cite our paper if it is useful for you.
-
+We would like to thank the contributors of the referenced repositories. Please cite our paper if this dataset is useful for your work.
 
 
 ## Contact
-
-Please request issues for any problems about the dataset and software. 
+If you have any problems with the dataset or software, please open an issue.
 
 For academic or commercial collaboration, please contact the corresponding author [Prof. Yantao Yu](https://ce.hkust.edu.hk/people/yantao-yu-yuyantao).
