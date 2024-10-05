@@ -12,14 +12,14 @@ This is a description of our dataset paper: A real world visual slam dataset for
 
 It will be released after the paper is accepted.
 
-| Sequence                 | Duration | Size  | Description                           | Link   |
-| ------------------------ | -------- | ----- | ------------------------------------- | ------ |
-| Building A1, static      | 85s      | 9.30G | Texture-less, multiple rooms          | Rosbag |
-| Building B1, static      | 78s      | 8.30G | Repetitive texture, looped trajectory | Rosbag |
-| Floor14, static2         | 56s      | 7.32G | Over-exposure                         | Rosbag |
-| Floor4,  static1         | 35s      | 4.56G | Glass, static workers                 | Rosbag |
-| Floor4, static3          | 24s      | 3.08G | Texture-less, single room             | Rosbag |
-| Floor1, dynamic (filter) | 55s      | 5.43G | Motion blur, dynamic workers          | Rosbag |
+| Sequence            | Duration | Size  | Description                           | Link   |
+| ------------------- | -------- | ----- | ------------------------------------- | ------ |
+| Building A1, static | 85s      | 9.30G | Texture-less, multiple rooms          | Rosbag |
+| Building B1, static | 78s      | 8.30G | Repetitive texture, looped trajectory | Rosbag |
+| Floor14, static2    | 56s      | 7.32G | Over-exposure                         | Rosbag |
+| Floor4,  static1    | 35s      | 4.56G | Glass, static workers                 | Rosbag |
+| Floor4, static3     | 24s      | 3.08G | Texture-less, single room             | Rosbag |
+| Floor1, dynamic     | 55s      | 5.43G | Motion blur, dynamic workers          | Rosbag |
 
 - Floor1 is a segment from the raw sequence and does not contain tf messages. You can use the transformations from other sequences.
 
@@ -29,24 +29,15 @@ It will be released after the paper is accepted.
 
 Include a RealSense L515 camera and a Ouster OS0-128 lidar. See our paper for more information about these sensors.
 
-<div style="display: flex; flex-direction: column; align-items: center;">
-  <div style="display: flex; width: 100%; justify-content: center;">
-    <figure style="margin-right: 5%;">
-      <img src="figure/camera.png" alt="camera" style="height: 250px; width: auto;">
-      <figcaption style="text-align: center;">RealSense L515</figcaption>
-    </figure>
-    <figure>
-      <img src="figure/lidar.png" alt="lidar" style="height: 250px; width: auto;">
-      <figcaption style="text-align: center;">Ouster OS0-128</figcaption>
-    </figure>
-  </div>
-  <div style="width: 100%; margin-top: -30px; display: flex; justify-content: center;">
-    <figure style="width: 70%;">
-      <img src="figure/data.png" alt="data" style="width: 100%;">
-      <figcaption style="text-align: center;">Sensor Data</figcaption>
-    </figure>
-  </div>
-</div>
+<p align="center">
+  <img src="figure/camera.png" alt="camera" height="250"> <img src="figure/lidar.png" alt="lidar" height="250">
+</p>
+<p align="center">RealSense L515 | Ouster OS0-128</p>
+
+<p align="center">
+  <img src="figure/data.png" alt="data" width="70%">
+</p>
+<p align="center">Sensor Data</p>
 
 
 ## Prerequisites
@@ -194,12 +185,14 @@ roslaunch limovelo ouster.launch
 
 
 
-<div style="text-align: center;">
+<p align="center">
   <a href="https://www.youtube.com/watch?v=UOO7NcGiOzY" title="YouTube video">YouTube</a> | 
   <a href="https://www.bilibili.com/video/BV1rx1RYCEm9/?share_source=copy_web&vd_source=06af5619f1080f2a613e3916fce2ae17" title="Bilibili video">Bilibili</a>
-</div>
+</p>
 
-![pic1](figure/lidar_test.png)
+<p align="center">
+  <img src="figure/lidar_test.png" alt="pic1">
+</p>
 
 
 
@@ -225,12 +218,14 @@ roslaunch orbslam3 vio.launch
 
 
 
-<div style="text-align: center;">
+<p align="center">
   <a href="https://www.youtube.com/watch?v=UBWpqnH1jf4" title="YouTube video">YouTube</a> | 
   <a href="https://www.bilibili.com/video/BV1r219YgEww/?share_source=copy_web&vd_source=06af5619f1080f2a613e3916fce2ae17" title="Bilibili video">Bilibili</a>
-</div>
+</p>
 
-<img src="figure/camera_test.png" alt="pic1" style="width: 70%;">
+<p align="center">
+  <img src="figure/camera_test.png" alt="pic1" width="70%">
+</p>
 
 
 
@@ -238,11 +233,14 @@ roslaunch orbslam3 vio.launch
 
 **For [orbslam3 RGBD-I mode](https://github.com/xiefei2929/ORB_SLAM3-RGBD-Inertial) (it failed):**
 
-<div style="text-align: center;">
+<p align="center">
   <a href="https://www.youtube.com/watch?v=dwSeJD0URyo" title="YouTube video">YouTube</a> | 
   <a href="https://www.bilibili.com/video/BV1q919YvEWr/?vd_source=0cb5df4b054962e7162c762abbea8201" title="Bilibili video">Bilibili</a>
-</div>
-<img src="figure/orb.png" alt="pic1" style="width: 70%;">
+</p>
+
+<p align="center">
+  <img src="figure/orb.png" alt="pic1" width="70%">
+</p>
 
 
 
