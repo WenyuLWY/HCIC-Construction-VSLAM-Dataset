@@ -1,0 +1,52 @@
+<launch>
+
+   <!-- <arg name="rviz" default="false" />
+   <arg name="rtabmapviz" default="false" /> 
+
+    <arg name="localization"            default="false"/>
+    <arg name="database_path"  default="~/.ros/rtabmap.db"/> -->
+    
+    <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_node">
+        <param name="use_mag"       value="false"/>
+        <param name="publish_tf"    value="false"/>
+        <param name="world_frame"   value="enu"/>
+        <remap from="/imu/data_raw" to="/camera/imu"/>
+        <remap from="/imu/data"     to="/rtabmap/imu"/>
+    </node>
+
+
+    <include  file="$(find rtabmap_ros)/launch/rtabmap.launch">
+        <arg name="rtabmap_args"      value="--delete_db_on_start"/>
+
+       <arg name="localization"            value="false"/>
+
+      <!-- -Rtabmap/StartNewMapOnLoopClosure 1 -->
+        <arg name="rgb_topic"         value="/camera/color/image_raw"/>
+        <arg name="depth_topic"       value="/camera/aligned_depth_to_color/image_raw"/>
+        <!-- <arg name="depth_topic"       value="/processed_depth_image"/>  -->
+        <arg name="camera_info_topic" value="/camera/color/camera_info"/>
+
+        <arg name="wait_for_transform"      value="1"/>
+
+
+        <arg name="publish_tf_odom"         value="true"/>
+
+        
+        <arg name="odom_topic"               value="/vins_estimator/odometry"/>  
+
+        <arg name="icp_odometry"   value="false"/> 
+        <arg name="visual_odometry"   value="false"/>
+
+        <arg name="approx_sync"       value="false"/>
+        <arg name="frame_id"          value="body"/>
+        
+        <!-- <arg name="imu_topic"         value="/rtabmap/imu"/> -->
+
+        <!-- <arg name="wait_imu_to_init"  value="true"/> -->
+
+        <arg name="queue_size"              value="50"/>
+        <arg name="rviz"              value="false"/>
+        <arg name="rtabmapviz"        value="false"/>
+    </include>
+    
+</launch>

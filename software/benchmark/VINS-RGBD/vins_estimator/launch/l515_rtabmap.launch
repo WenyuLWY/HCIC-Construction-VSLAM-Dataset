@@ -1,0 +1,35 @@
+<launch>
+
+    <!-- <include file="$(find vins_estimator)/launch/realsense/l515.launch">
+    </include> -->
+    <param name="/use_sim_time" value="true" />
+
+    <arg name="bagfile" default="/root/dataset/T7/dataset/bdr/comp_static_and_dynamic/bdr_compare_longloop_static.bag"/>
+    <node pkg="rosbag" type="play" name="player" args="-d 5 -r 1 --clock $(arg bagfile)" output="screen"/>
+
+    <node pkg="tf2_ros" type="static_transform_publisher" name="camera2base" args ="0 0 0 0 0 0 base_link camera_link" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="base2body" args ="0 0 0 0.5 -0.5 0.5 0.5 body base_link" />
+
+    <include file="$(find vins_estimator)/launch/l515.launch">
+    </include>
+
+    <!-- <arg name="database_path"           value="$(find vins_estimator)/../dbmap/test.db"/> -->
+    <!-- <include file="$(find vins_estimator)/launch/realsense/rtabmap.launch">
+        <arg name="localization"            value="false"/>
+    </include> -->
+
+
+    <include file="$(find vins_estimator)/launch/rtabmap_mapping.launch">
+    </include>
+
+
+    <node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager" output="screen"/>
+    <node pkg="nodelet" type="nodelet" name="point_cloud_xyzrgb" args="load rtabmap_ros/point_cloud_xyzrgb nodelet_manager">
+        <remap from="rgb/image"       to="/camera/color/image_raw"/>
+        <remap from="depth/image"     to="/camera/aligned_depth_to_color/image_raw"/>
+        <remap from="rgb/camera_info" to="/camera/color/camera_info"/>
+        <remap from="cloud"           to="/camera/depth/color/points"/>
+        <param name="queue_size" type="int" value="30"/>
+    </node>
+    
+</launch>

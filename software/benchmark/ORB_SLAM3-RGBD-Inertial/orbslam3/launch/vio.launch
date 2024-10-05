@@ -1,0 +1,19 @@
+<launch>
+
+  <arg name="vocabulary_path" default="$(find orbslam3)/../Vocabulary/ORBvoc.bin"/>
+  <arg name="config_file_path" default="$(find ORB_SLAM3)/l515.yaml"/>
+  
+  <arg name="args" default="$(arg vocabulary_path) $(arg config_file_path)"/>
+
+  <arg name="bagfile" default="/root/dataset/T7/dataset/bdr/comp_static_and_dynamic/bdr_compare_longloop_static.bag"/>
+  <node pkg="rosbag" type="play" name="player" args="-d 1 -r 1  $(arg bagfile)" output="screen"/>
+
+  <node pkg="ORB_SLAM3" type="RGBD_inertial" name="RGBD_inertial" args="$(arg args)" output="screen">
+    <remap from="/imu" to="/camera/imu"/>
+    <remap from="/rgb/image_raw" to="/camera/color/image_raw"/>
+    <remap from="/depth_to_rgb/image_raw" to="/camera/aligned_depth_to_color/image_raw"/>
+  </node>
+    <!-- <node pkg="ORB_SLAM3" type="RGBD_inertial" name="RGBD_inertial" args="vocabulary_path config_file_path" output="screen">
+  </node> -->
+
+</launch>
