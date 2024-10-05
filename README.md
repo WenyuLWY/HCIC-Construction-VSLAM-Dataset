@@ -1,18 +1,17 @@
 # HCIC-Construction-VSLAM-Dataset
 
 **Developer**: Wenyu Li, Xinyu Chen, Yantao Yu
+
 **Affiliation**: The Hong Kong University of Science and Technology
 
 This is a description of our dataset paper: A real world visual slam dataset for indoor construction sites
 
 
-<!--![build1](figure/build1.gif)-->
-<!--![floor1](figure/floor1.gif)-->
 
 
 <div style="display: flex;">
-  <img src="figure/build1.gif" alt="build1" style="width: 45%; margin-right: 5%;">
-  <img src="figure/floor1.gif" alt="floor1" style="width: 45%;">
+  <img src="figure/build1.gif" alt="build1" style="width: 35%; margin-right: 5%;">
+  <img src="figure/floor1.gif" alt="floor1" style="width: 35%;">
 </div>
 
 
