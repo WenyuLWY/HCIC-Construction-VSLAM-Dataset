@@ -7,13 +7,10 @@
 This is a description of our dataset paper: A real world visual slam dataset for indoor construction sites
 
 
-
-
-<div style="display: flex;">
-  <img src="figure/build1.gif" alt="build1" style="width: 35%; margin-right: 5%;">
-  <img src="figure/floor1.gif" alt="floor1" style="width: 35%;">
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="figure/build1.gif" alt="build1" style="width: 45%; margin-right: 5%;">
+  <img src="figure/floor1.gif" alt="floor1" style="width: 45%;">
 </div>
-
 
 ## Download 
 
