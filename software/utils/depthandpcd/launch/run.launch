@@ -1,0 +1,46 @@
+<launch>
+
+
+  <arg name="rviz"                        default="true"/>
+  <arg name="bagfile"                     default="/home/wenyu/Downloads/bdr_floor1_dynamic.bag"/>
+
+
+  <!-- common parameters -->
+  <arg name="imu_topic"                   default="/camera/imu"/> 
+  <arg name="image_topic"                 default="/camera/color/image_raw"/> 
+  <arg name="depth_topic"                 default="/camera/aligned_depth_to_color/image_raw"/> 
+  <arg name="image_width"                 default="960"/> 
+  <arg name="image_height"                default="540"/> 
+
+
+  <!-- distortion_parameters -->
+  <arg name="k1"                          default="0.166439"/> 
+  <arg name="k2"                          default="-0.502598"/> 
+  <arg name="p1"                          default="-0.000923"/> 
+  <arg name="p2"                          default="0.001173"/> 
+  <arg name="k3"                          default="0.461488"/> 
+  <!-- projection_parameters -->
+  <arg name="fx"                          default="675.585510"/> 
+  <arg name="fy"                          default="676.195007"/> 
+  <arg name="cx"                          default="492.865662"/> 
+  <arg name="cy"                          default="269.670898"/> 
+  
+
+  <node pkg="depthandpcd"    type="depthandpcd_node"    name="depthandpcd_node"    output="screen"/>
+
+  <node pkg="rosbag" type="play" name="player" args="-d 1 -r 1 $(arg bagfile)" output="log"/>
+
+  <node if="$(arg rviz)"  name="rvizvisualisation" pkg="rviz" type="rviz" output="screen" args="-d $(find depthandpcd)/launch/run.rviz" />
+
+  <!-- for visualization -->
+  <node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager" output="screen"/>
+  <node pkg="nodelet" type="nodelet" name="point_cloud_xyzrgb" args="load rtabmap_util/point_cloud_xyzrgb nodelet_manager">
+      <remap from="rgb/image"       to="/camera/color/image_raw"/>
+      <remap from="depth/image"     to="/camera/aligned_depth_to_color/image_raw"/>
+      <remap from="rgb/camera_info" to="/camera/color/camera_info"/>
+      <remap from="cloud"           to="/camera/depth/color/points"/>
+      <param name="sync_queue_size" type="int" value="30"/>
+  </node>
+
+
+</launch>
