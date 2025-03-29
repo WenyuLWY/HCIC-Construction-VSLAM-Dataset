@@ -256,7 +256,30 @@ The localization results are saved in TUM format. You can use the [evo tool](htt
 
 We would like to thank the contributors of the referenced repositories. Please cite our paper if this dataset is useful for your work.
 
+Our previous research on vSLAM was also collected in the same environment. You can refer to them for more information. 
+```
+@inproceedings{chen2023hle,
+  title={HLE-SLAM: SLAM for overexposed construction environment},
+  author={Chen, Xinyu and Yu, Yantao},
+  booktitle={ISARC. Proceedings of the International Symposium on Automation and Robotics in Construction},
+  volume={40},
+  pages={585--588},
+  year={2023},
+  organization={IAARC Publications}
+}
+```
 
+```
+@article{chen2024unsupervised,
+  title={An unsupervised low-light image enhancement method for improving V-SLAM localization in uneven low-light construction sites},
+  author={Chen, Xinyu and Yu, Yantao},
+  journal={Automation in Construction},
+  volume={162},
+  pages={105404},
+  year={2024},
+  publisher={Elsevier}
+}
+```
 ## Contact
 If you have any problems with the dataset or software, please open an issue.
 
