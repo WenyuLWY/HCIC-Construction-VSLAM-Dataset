@@ -4,7 +4,7 @@
 
 **Affiliation**: The Hong Kong University of Science and Technology
 
-This is a description of our dataset paper: A real world visual slam dataset for indoor construction sites
+This is a description of our dataset paper: A real world visual slam dataset for indoor construction sites. This paper has been accepted by [ICCBEI 2025](https://iccbei2025.hkust.edu.hk/).
 
 <img src="figure/build1.gif" alt="build1" width="35%">  <img src="figure/floor1.gif" alt="floor1" width="35%">
 
