@@ -10,7 +10,7 @@ This is a description of our dataset paper: A real world visual slam dataset for
 
 ## Download 
 
-The dataset will be  available after the paper is accepted.
+The dataset is available now:
 
 | Sequence            | Duration | Size  | Description                           | Link   |
 | ------------------- | -------- | ----- | ------------------------------------- | ------ |
