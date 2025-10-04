@@ -8,6 +8,19 @@ This is a description of our dataset paper: **A real world visual slam dataset f
 
 <img src="figure/build1.gif" alt="build1" width="35%">  <img src="figure/floor1.gif" alt="floor1" width="35%">
 
+Please cite our paper if this dataset is useful for your work.
+
+```
+@inproceedings{li2025real,
+  title={A Real World Visual SLAM Dataset for Indoor Construction Sites},
+  author={Li, Wenyu and Chen, Xinyu and Yu, Yantao},
+  booktitle={Proceedings of The Sixth International Conference on Civil and Building Engineering Informatics(ICCBEI)},
+  volume={22},
+  pages={368--379},
+  year={2025}
+}
+```
+
 ## Download 
 
 The dataset is available now:
@@ -254,20 +267,7 @@ The localization results are saved in TUM format. You can use the [evo tool](htt
 
 ## Acknowledgments
 
-We would like to thank the contributors of the referenced repositories. Please cite our paper if this dataset is useful for your work.
-
-```
-@inproceedings{li2025real,
-  title={A Real World Visual SLAM Dataset for Indoor Construction Sites},
-  author={Li, Wenyu and Chen, Xinyu and Yu, Yantao},
-  booktitle={Proceedings of The Sixth International Conference on Civil and Building Engineering Informatics(ICCBEI)},
-  volume={22},
-  pages={368--379},
-  year={2025}
-}
-```
-
-Our previous research on vSLAM was also collected in the same environment. You can refer to them for more information. 
+We would like to thank the contributors of the referenced repositories. Our previous research on vSLAM was also collected in the same environment. You can refer to them for more information. 
 ```
 @inproceedings{chen2023hle,
   title={HLE-SLAM: SLAM for overexposed construction environment},
