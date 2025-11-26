@@ -23,16 +23,21 @@ Please cite our paper if this dataset is useful for your work.
 
 ## Download 
 
-The dataset is available now:
+The dataset is available at:
 
-| Sequence            | Duration | Size  | Description                           | Link   |
-| ------------------- | -------- | ----- | ------------------------------------- | ------ |
-| Building A1, static | 85s      | 9.30G | Texture-less, multiple rooms          | [Rosbag](https://hkustconnect-my.sharepoint.com/:u:/g/personal/wlief_connect_ust_hk/EcLGHKbvludAvh2fn9-SqikBpYX2zgmvvH-so4lS1sYoYQ?e=SXWlH6) |
-| Building B1, static | 78s      | 8.30G | Repetitive texture, looped trajectory | [Rosbag](https://hkustconnect-my.sharepoint.com/:u:/g/personal/wlief_connect_ust_hk/EUuUajEvh9hLkqoh-yj6kDYBWnSHHaoqktU-ZkECpeTC3w?e=zXcaLu) |
-| Floor14, static2    | 56s      | 7.32G | Over-exposure                         | [Rosbag](https://hkustconnect-my.sharepoint.com/:u:/g/personal/wlief_connect_ust_hk/EZV89S5Y7ztLnMYsgzbOLr8B3K5eN8HjTXvktl9NFBr3lg?e=RgepDT) |
-| Floor4, static1    | 35s      | 4.56G | Glass, static workers                 | [Rosbag](https://hkustconnect-my.sharepoint.com/:u:/g/personal/wlief_connect_ust_hk/EWs2TVGi_dVGgx9O6RUvG28BtYRn_6PZrbmqVBE1I6s_wg?e=AEthkp) |
-| Floor4, static3     | 24s      | 3.08G | Texture-less, single room             | [Rosbag](https://hkustconnect-my.sharepoint.com/:u:/g/personal/wlief_connect_ust_hk/EZW3omQlIlVMgWmnz5vTGg8BU1bZgypNFJsoj9ss_DEnTA?e=hP1ZeC) |
-| Floor1, dynamic     | 55s      | 5.43G | Motion blur, dynamic workers          | [Rosbag](https://hkustconnect-my.sharepoint.com/:u:/g/personal/wlief_connect_ust_hk/ERujgx1bOL5Ml_mn-gIK_YMBl7aUTJ6Gh9JlX_zFFAygLQ?e=7E8jzO) |
+[MEGA](https://mega.nz/folder/gJ1BDYyL#ocg1ioiZvVLySj0hCRa-Qw)
+[Baiduyun](https://pan.baidu.com/s/1k7qvstIyXpqr8qUofUPAaA?pwd=sjbm)
+
+I am in tring different netdisks these days so the link may be updated.
+
+| Sequence            | Duration  | Description                           |
+| ------------------- | --------  | ------------------------------------- |
+| Building A1, static | 85s       | Texture-less, multiple rooms          | 
+| Building B1, static | 78s       | Repetitive texture, looped trajectory | 
+| Floor14, static2    | 56s       | Over-exposure                         |
+| Floor4, static1     | 35s        | Glass, static workers                |
+| Floor4, static3     | 24s       | Texture-less, single room             |
+| Floor1, dynamic     | 55s       | Motion blur, dynamic workers          |
 
 
 - The Floor1 sequence is a segment of the raw data and does not contain tf messages. Transformations from other sequences can be used.
